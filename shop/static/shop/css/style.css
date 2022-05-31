@@ -1,4 +1,8 @@
-.product-card {
+body {
+    background-color: lightblue;
+}
+
+/* .product-card {
     background-color: lightyellow;
     box-shadow: 5px 10px aquamarine;
     display:inline-block;
@@ -11,4 +15,4 @@
 
 .product-card > p {
     color: orangered;
-}
+} */
