@@ -2,15 +2,41 @@
 
 {% block content %}
 
+
+    {% for product in products %}
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ product.image }}" class="img-fluid rounded-start" alt="{{ product.title }}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.title }}</h5>
+                                <p class="card-text">{{ product.desc }}</p>
+                                <span class="card-text"><small class="text-muted">{{ product.price }}</small></span>
+                                <a href="{% url 'shop:detail' product.id %}" class="btn btn-success offset-sm-6">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    {% endfor %}
+
+    <!-- This is the old code
     {% for product in products %}
         <div class="product-card">
-            <h3>
-                <!-- <a href="/{{ product.id }}">{{ product.title }}</a> -->
-                <a href="{% url 'shop:detail' product.id %}">{{ product.title }}</a>
+            <h3> -->
+                <!-- This is a comment in other one. <a href="/{{ product.id }}">{{ product.title }}</a> -->
+                <!-- <a href="{% url 'shop:detail' product.id %}">{{ product.title }}</a>
             </h3>
             <p>{{ product.desc }}</p>
             <span>{{ product.price }}</span>
         </div>
-    {% endfor %}
+    {% endfor %} -->
 
 {% endblock %}

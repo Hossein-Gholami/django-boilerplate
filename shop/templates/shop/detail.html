@@ -2,10 +2,31 @@
 
 {% block content %}
 
-    <div class="product-card">
-        <h3>{{ product.title }}</h3>
-        <p>{{ product.desc }}</p>
-        <span>{{ product.price }}</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img height="300px" src="{{ product.image }}">
+            </div>
+
+            <div class="col-md-6">
+                <h1>{{ product.title }}</h1>
+                <h2>{{ product.desc }}</h2>
+                <h3>${{ product.price }}</h3>
+            </div>
+        </div>
     </div>
+
+    <!-- <div class="row">
+        <div class="col-md-3 offset-md-2">
+            <img class="card" height="150px" src="{{ product.image }}">
+        </div>
+        <div class="col-md-4">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.desc }}</p>
+        </div>
+        <div class="col-md-2">
+            <h6>${{ product.price }}</h6>
+        </div>
+    </div> -->
 
 {% endblock %}
