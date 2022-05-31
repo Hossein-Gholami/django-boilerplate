@@ -1,0 +1,14 @@
+.product-card {
+    background-color: lightyellow;
+    box-shadow: 5px 10px aquamarine;
+    display:inline-block;
+    position:relative;
+    border: solid 2px red;
+    padding: 5px; margin: 10px;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 5%;
+}
+
+.product-card > p {
+    color: orangered;
+}

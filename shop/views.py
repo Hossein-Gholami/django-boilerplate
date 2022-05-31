@@ -19,6 +19,14 @@ def index(request):
     context = {
         "products": products
     }
-    template = loader.get_template('shop/index.html')
-    return HttpResponse(template.render(context,request))
+    # template = loader.get_template('shop/index.html')
+    # return HttpResponse(template.render(context,request))
+    return render(request, 'shop/index.html', context)
+
+def detail(request, product_id):
+    product = Product.objects.get(id=product_id)
+    context = {
+        'product': product
+    }
+    return render(request,'shop/detail.html', context)
 
