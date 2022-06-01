@@ -12,6 +12,8 @@
                 <h1>{{ product.title }}</h1>
                 <h2>{{ product.desc }}</h2>
                 <h3>${{ product.price }}</h3>
+                <a href="{% url 'shop:update_product_item' product.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'shop:delete_product_item' product.id %}" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>

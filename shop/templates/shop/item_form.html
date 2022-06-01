@@ -1,5 +1,9 @@
-<form action="{% url 'shop:create_product_item' %}" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Save</button>
-</form>
+{% extends 'shop/base.html' %}
+{% block content %}
+    <!-- i see the error. <form action="{% url 'shop:create_product_item' %}" method="post"></form> -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}
